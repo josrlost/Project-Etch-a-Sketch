@@ -53,5 +53,5 @@ for(i = 0; i < limitLoop; i++) {
     console.log(gridArray);
 };
 
-gridArray.forEach((ele) => ele.addEventListener('mouseover', (evt) => {evt.target.style.backgroundColor = `rgb(${randomizeColor(255)} ${randomizeColor(255)} ${randomizeColor(255)}`}));
-gridArray.forEach((ele) => ele.addEventListener('mouseout', (evt) => {evt.target.style.backgroundColor = `rgb(${randomizeColor(255)} ${randomizeColor(255)} ${randomizeColor(255)}`}));
+gridArray.forEach((ele) => ele.addEventListener('mouseover', (evt) => {evt.target.style.backgroundColor = `rgb(${randomizeColor(255)} ${randomizeColor(255)} ${randomizeColor(255)}`; evt.target.style.transition = "5s, 1s"; evt.style.opacity = '100%'}));
+gridArray.forEach((ele) => ele.addEventListener('mouseout', (evt) => {evt.target.style.backgroundColor = `rgb(${randomizeColor(255)} ${randomizeColor(255)} ${randomizeColor(255)}`; evt.target.style.transition = "5s, 1s"; evt.style.opacity = '1000%'}));
