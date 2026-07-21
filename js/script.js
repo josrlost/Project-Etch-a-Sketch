@@ -37,7 +37,7 @@ for(i = 0; i < limitLoop; i++) {
     gridArray.push(document.createElement('div'));
     gridArray[i].classList.add('grid');
     gridArray[i].textContent = '1';
-    gridArray[i].style.borderColor = 'black';
+    gridArray[i].style.border = '2px solid black';
     mainContainer.appendChild(gridArray[i]);
     console.log(gridArray);
 };
