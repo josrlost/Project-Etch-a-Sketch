@@ -8,7 +8,9 @@ let gridArray = [];
 expandGridBtn.addEventListener('click', () => creatingNewGrid());
 
 function creatingNewGrid() {
-    limitLoop = prompt('Add new number of squares per side for the grid', 256);
+    limitLoop = prompt('Add new number of squares per side', 16);
+    if(limitLoop > 50) {prompt('Enter a number not greater than 50')}
+    else if(limitLoop <= 50) {
     gridArray.forEach((ele) => ele.remove());
     limitLoop = limitLoop * limitLoop;
     for(i = 0; i < limitLoop; i++) {
@@ -17,7 +19,7 @@ function creatingNewGrid() {
     gridArray[i].textContent = '1';
     mainContainer.appendChild(gridArray[i]);
     console.log(gridArray);
-};
+}; }
 } 
 
 for(i = 0; i < limitLoop; i++) {
@@ -29,3 +31,4 @@ for(i = 0; i < limitLoop; i++) {
 };
 
 gridArray.forEach((ele) => ele.addEventListener('mouseover', (evt) => {evt.target.style.backgroundColor = 'black'}));
+gridArray.forEach((ele) => ele.addEventListener('mouseout', (evt) => {evt.target.style.backgroundColor = 'red'}));
